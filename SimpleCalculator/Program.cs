@@ -18,7 +18,7 @@ namespace SimpleCalculator
 
                 double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
 
-                Console.WriteLine(result);
+                Console.WriteLine("The answer is : " + result.ToString());
 
             } catch (Exception ex)
             {

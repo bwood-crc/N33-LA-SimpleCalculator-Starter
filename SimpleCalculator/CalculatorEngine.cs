@@ -8,10 +8,23 @@ namespace SimpleCalculator
         {
             double result = 0;
 
-            if (argOperation == "+" || argOperation.ToLower() == "add") {
+            if (argOperation == "+" || argOperation.ToLower() == "add")
+            {
                 result = argFirstNumber + argSecondNumber;
             }
+            else if (argOperation == "-" || argOperation.ToLower() == "minus")
+            {
 
+                result = argFirstNumber - argSecondNumber;
+            }
+            else if (argOperation == "*" || argOperation.ToLower() == "multiply")
+            {
+                result = argFirstNumber * argSecondNumber;
+            }
+            else if (argOperation == "/" || argOperation.ToLower() == "divide")
+            {
+                result = argFirstNumber / argSecondNumber;
+            }
             return result;
         }
     }

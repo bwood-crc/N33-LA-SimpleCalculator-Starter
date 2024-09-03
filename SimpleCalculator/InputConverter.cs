@@ -4,16 +4,20 @@ namespace SimpleCalculator
 {
     public class InputConverter
     {
-        public double ConvertInputToNumeric(string argTextInput)
-        { double numDouble;
-            
-            bool attemptParse = double.TryParse(argTextInput, out numDouble);
+        static double result = 0;
+       static bool attParse = false;
 
-            if (!attemptParse) { }
-            return 0;
-            }
-             
-            
+        public static bool ValidInput(string input)
+        {
+            bool attParse = double.TryParse(input, out result);
+            return attParse;
+
         }
+        public static double ConvertInputToNumeric(string argTextInput)
+        {
+            result = double.Parse(argTextInput);
+            return result;
+        }
+
     }
 }

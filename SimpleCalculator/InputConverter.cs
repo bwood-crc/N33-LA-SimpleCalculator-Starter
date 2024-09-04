@@ -30,5 +30,10 @@ namespace SimpleCalculator
             }while (tester != 0);
             return input;
         }
+        public static string OperationConverter(string operation) {
+            return "";
+        }
     }
+
+    
 }

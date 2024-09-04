@@ -21,8 +21,8 @@ namespace SimpleCalculator
                 double firstNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine());
                 Console.WriteLine("enter the second number in its numerical form:");
                 double secondNumber =InputConverter.ConvertInputToNumeric(Console.ReadLine());
-                Console.WriteLine("enter the operation you wish to perform: (ex: +, - , x, /) : ");
-                string operation = Console.ReadLine();
+                Console.WriteLine("enter the operation you wish to perform: (ex: + or plus, - or substract , x or multiply, / or divide) : ");
+                string operation = InputConverter.OperationConverter(Console.ReadLine());
 
                 double result =CalcUtilities.Calculate(operation, firstNumber, secondNumber);
                 

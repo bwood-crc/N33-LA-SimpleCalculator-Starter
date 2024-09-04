@@ -12,7 +12,6 @@ namespace SimpleCalculator
             try
             {
               
-
                 
                 double firstNumber;
                 string firstInput;
@@ -27,14 +26,29 @@ namespace SimpleCalculator
                 //test
                 //Console.WriteLine(firstInput);
                 //testworks
-                //double secondNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine());
-                string operation = Console.ReadLine();
+                firstNumber=Converter.ConvertInputToNumeric(firstInput);
 
-                //double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
+                double secondNumber;
+                string secondInput;
+                Console.WriteLine("Enter the second number of the opperation: ");
+                secondInput = Console.ReadLine();
 
-               // Console.WriteLine("The awnser is {0:.##}",result);
+                while (!Converter.ValidInput(secondInput))
+                {
+                    Console.WriteLine("Invalid Entry, enter a numerical: ");
+                    secondInput = Console.ReadLine();
+                }
+                //test
+                //Console.WriteLine(secondInput);
+                //testworks
+                secondNumber = Converter.ConvertInputToNumeric(secondInput);
 
-            } catch (Exception ex)
+                //getting operator
+                Console.WriteLine("What operation would you like to make \n choose either \' + \' , \' / \' , \' - \' , \' * \' , \' % \':");
+                string operationSelection = Console.ReadLine();
+
+            }
+            catch (Exception ex)
             {
                 // Normally, we'd log this error to a file.
                 Console.WriteLine(ex.Message);

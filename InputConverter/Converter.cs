@@ -10,6 +10,8 @@ namespace InputConverter
     {
         static double result = 0;
         static bool attParse = false;
+        static bool attValidate = false;
+        static string[] operationOptions = { "add", "+", "minus", "-", "multiply", "*", "divide", "/", "percent", "%" };
 
         public static bool ValidInput(string input)
         {
@@ -21,6 +23,17 @@ namespace InputConverter
         {
             result = double.Parse(argTextInput);
             return result;
+        }
+        public static bool operationValidator(string operation)
+        {
+            foreach (string i in operationOptions)
+            {
+                if (operation.Equals(i))
+                {
+                    attValidate = true;
+                }
+            }
+            return attValidate;
         }
     }
 }

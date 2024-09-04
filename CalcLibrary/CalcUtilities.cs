@@ -1,5 +1,8 @@
 ﻿
 
+using System;
+using System.Xml.Linq;
+
 namespace CalcLibrary
     
 {
@@ -49,6 +52,12 @@ namespace CalcLibrary
 
 
                     break;
+
+                case "^":
+                case "power":
+
+                    result = Math.Pow(argFirstNumber, argSecondNumber);
+                    return result;
 
 
             }

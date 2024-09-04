@@ -18,22 +18,55 @@ namespace SimpleCalculator
                     {
                         break;
                     }
-               }
+                }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Enter a number's numerical value not something else!");
                     tester = 1;
                 }
                 Console.WriteLine("Enter the number's numerical value: ");
-                argTextInput=Console.ReadLine();
+                argTextInput = Console.ReadLine();
 
-            }while (tester != 0);
+            } while (tester != 0);
             return input;
         }
-        public static string OperationConverter(string operation) {
-            return "";
+        public static string OperationConverter(string operation)
+        {
+            Boolean isvalid = false;
+
+
+            while (!isvalid)
+            {
+
+                switch (operation.ToLower())
+                {
+                    case "+":
+                    case "add":
+                    case "-":
+                    case "substract":
+                    case "*":
+                    case "multiply":
+                    case "/":
+                    case "division":
+                    case "^":
+                    case "power":
+
+                        isvalid = true;
+
+                        break;
+
+                    default:
+
+                        Console.WriteLine("Enter standard operator in numeric format or in letter format such as + / add, - / substract, x / multiply, " +
+                    "(/) / division, ^ / power ");
+                        operation = Console.ReadLine();
+                        break;
+
+                }
+
+            }
+            return operation.ToLower();
+        } 
         }
     }
 
-    
-}

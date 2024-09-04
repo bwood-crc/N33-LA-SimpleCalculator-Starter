@@ -4,17 +4,8 @@ namespace SimpleCalculator
 {
     public class CalculatorEngine
     {
-       //testing
-       //testing2
-        public double Calculate (string argOperation, double argFirstNumber, double argSecondNumber)
-        {
-            double result = 0;
-
-            if (argOperation == "+" || argOperation.ToLower() == "add") {
-                result = argFirstNumber + argSecondNumber;
-            }
-
-            return result;
-        }
+        //testing
+        //testing2
+      
     }
 }

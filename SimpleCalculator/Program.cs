@@ -1,5 +1,6 @@
 ﻿using System;
 using InputConverter;
+using CalcTools;
 namespace SimpleCalculator
 {
 
@@ -61,6 +62,10 @@ namespace SimpleCalculator
                     Console.WriteLine();
                     operationSelection = Console.ReadLine();
                 }
+                double result = 0;
+                result=CalcUti.Calculate(operationSelection, firstNumber, secondNumber);
+                Console.WriteLine(result);
+                Console.ReadLine();
             }
             catch (Exception ex)
             {

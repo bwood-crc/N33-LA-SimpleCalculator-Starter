@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.10.35201.131
+VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator", "SimpleCalculator\SimpleCalculator.csproj", "{5B1E5E51-A8D6-4A82-8344-831C86CC2468}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator.Test.Unit", "SimpleCalculator.Test.Unit\SimpleCalculator.Test.Unit.csproj", "{9CD2395E-5BA7-4EA8-A5D2-EFED7B1E4856}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcEngineLibrary", "CalculatorEngine\CalcEngineLibrary.csproj", "{0603FD6F-19F0-47E1-B20C-4CE42F8A7D99}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputConverter", "InputConverter\InputConverter.csproj", "{36EA3CB7-1291-401F-8840-920A5C07A2F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcTools", "CalcTools\CalcTools.csproj", "{74133C5B-D69D-4671-8CD8-A20C46AE7114}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{9CD2395E-5BA7-4EA8-A5D2-EFED7B1E4856}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CD2395E-5BA7-4EA8-A5D2-EFED7B1E4856}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CD2395E-5BA7-4EA8-A5D2-EFED7B1E4856}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0603FD6F-19F0-47E1-B20C-4CE42F8A7D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0603FD6F-19F0-47E1-B20C-4CE42F8A7D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0603FD6F-19F0-47E1-B20C-4CE42F8A7D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0603FD6F-19F0-47E1-B20C-4CE42F8A7D99}.Release|Any CPU.Build.0 = Release|Any CPU
 		{36EA3CB7-1291-401F-8840-920A5C07A2F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{36EA3CB7-1291-401F-8840-920A5C07A2F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36EA3CB7-1291-401F-8840-920A5C07A2F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36EA3CB7-1291-401F-8840-920A5C07A2F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74133C5B-D69D-4671-8CD8-A20C46AE7114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74133C5B-D69D-4671-8CD8-A20C46AE7114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74133C5B-D69D-4671-8CD8-A20C46AE7114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74133C5B-D69D-4671-8CD8-A20C46AE7114}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

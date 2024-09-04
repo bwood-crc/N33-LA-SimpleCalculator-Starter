@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace CalcEngineLibrary
+namespace CalcTools
 {
-    public class CalcUtilities
+    public class CalcUti
     {
-        public double Calculate(string argOperation, double argFirstNumber, double argSecondNumber)
-        {
-            double result = 0;
-
+        static double result = 0;
+        public static double Calculate(string argOperation, double argFirstNumber, double argSecondNumber) { 
             //There is two cases per switch to be able to take in the symbol and the word
             //Addition
             switch (argOperation) {
@@ -29,7 +31,7 @@ namespace CalcEngineLibrary
                 case "multiply":
                 case "*":
 
-                    result = argFirstNumber * argSecondNumber;
+                    result = argFirstNumber* argSecondNumber;
                     break;
                     //Division
                 case "divide":

@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator.Test.Unit"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcEngineLibrary", "CalculatorEngine\CalcEngineLibrary.csproj", "{0603FD6F-19F0-47E1-B20C-4CE42F8A7D99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcLibrary", "CalcLibrary\CalcLibrary.csproj", "{645293E8-34FB-4158-B0D5-D76BF1A9568B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputConverter", "InputConverter\InputConverter.csproj", "{36EA3CB7-1291-401F-8840-920A5C07A2F8}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{0603FD6F-19F0-47E1-B20C-4CE42F8A7D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0603FD6F-19F0-47E1-B20C-4CE42F8A7D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0603FD6F-19F0-47E1-B20C-4CE42F8A7D99}.Release|Any CPU.Build.0 = Release|Any CPU
-		{645293E8-34FB-4158-B0D5-D76BF1A9568B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{645293E8-34FB-4158-B0D5-D76BF1A9568B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{645293E8-34FB-4158-B0D5-D76BF1A9568B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{645293E8-34FB-4158-B0D5-D76BF1A9568B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{36EA3CB7-1291-401F-8840-920A5C07A2F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{36EA3CB7-1291-401F-8840-920A5C07A2F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36EA3CB7-1291-401F-8840-920A5C07A2F8}.Release|Any CPU.ActiveCfg = Release|Any CPU

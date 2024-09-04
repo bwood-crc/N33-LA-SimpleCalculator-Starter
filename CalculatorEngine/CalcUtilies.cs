@@ -2,7 +2,7 @@
 
 namespace SimpleCalculator
 {
-    public class CalculatorEngine
+    public class CalcEngineLibrary
     {
         public double Calculate(string argOperation, double argFirstNumber, double argSecondNumber)
         {
@@ -44,6 +44,7 @@ namespace SimpleCalculator
                     result = (argFirstNumber / 100) * argSecondNumber;
                     break;
             }
+            //Giving back the awnser
             return result;
         }
     }

@@ -2,6 +2,7 @@
 using InputConverter;
 using CalcTools;
 namespace SimpleCalculator
+    
 {
 
     class Program

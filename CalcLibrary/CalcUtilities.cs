@@ -5,7 +5,7 @@ namespace CalcLibrary
 {
     public class CalcUtilities
     {
-        public double Calculate(string argOperation, double argFirstNumber, double argSecondNumber)
+        public static double Calculate(string argOperation, double argFirstNumber, double argSecondNumber)
 
         {
             double result = 0;

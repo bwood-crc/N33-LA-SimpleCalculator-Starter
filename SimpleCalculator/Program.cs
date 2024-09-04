@@ -2,6 +2,7 @@
 using CalcLibrary;
 
 
+
 namespace SimpleCalculator
 {
     class Program
@@ -10,12 +11,11 @@ namespace SimpleCalculator
         {
             try
             {
-                var a = 5.5m;
-                var b = 2.2m;
-                var c = CalcUtilities.Calculate.add(a, b);
+               
               
                 // Class to perform actual calculations
-                CalculatorEngine calculatorEngine = new CalculatorEngine();
+               
+              
 
                 Console.WriteLine("enter the first number in its numerical form:");
                 double firstNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine());
@@ -24,7 +24,7 @@ namespace SimpleCalculator
                 Console.WriteLine("enter the operation you wish to perform: (ex: +, - , x, /) : ");
                 string operation = Console.ReadLine();
 
-                double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
+                double result =CalcUtilities.Calculate(operation, firstNumber, secondNumber);
                 
                 Console.WriteLine("The value {0} {1} the value {2} is equal to {3:.00}",firstNumber,operation ,secondNumber,result.ToString());
                 Console.ReadLine();

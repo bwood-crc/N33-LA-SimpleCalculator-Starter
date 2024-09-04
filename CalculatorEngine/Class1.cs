@@ -8,27 +8,35 @@ namespace SimpleCalculator
         {
             double result = 0;
 
-            if (argOperation == "+" || argOperation.ToLower() == "add")
-            {
-                result = argFirstNumber + argSecondNumber;
-            }
-            else if (argOperation == "-" || argOperation.ToLower() == "minus")
-            {
+            switch (argOperation) {
+                case "add":
+                case "+" :
 
-                result = argFirstNumber - argSecondNumber;
-            }
-            else if (argOperation == "*" || argOperation.ToLower() == "multiply")
-            {
-                result = argFirstNumber * argSecondNumber;
-            }
-            else if (argOperation == "/" || argOperation.ToLower() == "divide")
-            {
-                result = argFirstNumber / argSecondNumber;
-            }
-            else if (argOperation == "%" || argOperation.ToLower() == "percentage")
-            {
-                result = (argFirstNumber / 100) * argSecondNumber;
 
+                    result = argFirstNumber + argSecondNumber;
+                    break;
+
+                case "minus":
+                case "-":
+
+
+                    result = argFirstNumber - argSecondNumber;
+                    break;
+                case "multiply":
+                case "*":
+
+                    result = argFirstNumber * argSecondNumber;
+                    break;
+                case "divide":
+                case "/":
+
+                    result = argFirstNumber / argSecondNumber;
+                    break;
+                case "percent":
+                case "%":
+
+                    result = (argFirstNumber / 100) * argSecondNumber;
+                    break;
             }
             return result;
         }

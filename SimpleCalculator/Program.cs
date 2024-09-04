@@ -1,4 +1,5 @@
 ﻿using System;
+using CalcLibrary;
 
 namespace SimpleCalculator
 {
@@ -8,6 +9,9 @@ namespace SimpleCalculator
         {
             try
             {
+                var a = 5.5m;
+                var b = 2.2m;
+                var c = CalcUtilities.add(a, b);
               
                 // Class to perform actual calculations
                 CalculatorEngine calculatorEngine = new CalculatorEngine();

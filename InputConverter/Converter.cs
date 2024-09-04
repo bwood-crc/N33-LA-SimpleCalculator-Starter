@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SimpleCalculator
+namespace InputConverter
 {
-    public class InputConverter
+    public class Converter
     {
         static double result = 0;
-       static bool attParse = false;
+        static bool attParse = false;
 
         public static bool ValidInput(string input)
         {
@@ -18,6 +22,5 @@ namespace SimpleCalculator
             result = double.Parse(argTextInput);
             return result;
         }
-
     }
 }

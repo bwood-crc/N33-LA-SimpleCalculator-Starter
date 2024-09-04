@@ -8,6 +8,8 @@ namespace SimpleCalculator
         {
             double result = 0;
 
+            //There is two cases per switch to be able to take in the symbol and the word
+            //Addition
             switch (argOperation) {
                 case "add":
                 case "+" :
@@ -16,22 +18,26 @@ namespace SimpleCalculator
                     result = argFirstNumber + argSecondNumber;
                     break;
 
+                    //Minus
                 case "minus":
                 case "-":
 
 
                     result = argFirstNumber - argSecondNumber;
                     break;
+                    //Multiplication
                 case "multiply":
                 case "*":
 
                     result = argFirstNumber * argSecondNumber;
                     break;
+                    //Division
                 case "divide":
                 case "/":
 
                     result = argFirstNumber / argSecondNumber;
                     break;
+                    //Calculating the percentage of the first number
                 case "percent":
                 case "%":
 

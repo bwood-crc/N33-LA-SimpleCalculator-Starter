@@ -1,6 +1,7 @@
 ﻿using System;
 using InputConverter;
 namespace SimpleCalculator
+    
 {
 
     class Program

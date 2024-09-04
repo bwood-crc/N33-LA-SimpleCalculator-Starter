@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace CaclEngineLibrary
+namespace SimpleCalculator
 {
-    public class CalcEngineLibrary
+    public class CalculatorLibrary
     {
         public double Calculate(string argOperation, double argFirstNumber, double argSecondNumber)
         {
@@ -10,34 +10,35 @@ namespace CaclEngineLibrary
 
             //There is two cases per switch to be able to take in the symbol and the word
             //Addition
-            switch (argOperation) {
+            switch (argOperation)
+            {
                 case "add":
-                case "+" :
+                case "+":
 
 
                     result = argFirstNumber + argSecondNumber;
                     break;
 
-                    //Minus
+                //Minus
                 case "minus":
                 case "-":
 
 
                     result = argFirstNumber - argSecondNumber;
                     break;
-                    //Multiplication
+                //Multiplication
                 case "multiply":
                 case "*":
 
                     result = argFirstNumber * argSecondNumber;
                     break;
-                    //Division
+                //Division
                 case "divide":
                 case "/":
 
                     result = argFirstNumber / argSecondNumber;
                     break;
-                    //Calculating the percentage of the first number
+                //Calculating the percentage of the first number
                 case "percent":
                 case "%":
 

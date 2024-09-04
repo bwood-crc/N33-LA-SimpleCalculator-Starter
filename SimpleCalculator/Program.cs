@@ -1,7 +1,7 @@
 ﻿using System;
-using CalcLibrary;
 using InputConverter;
 namespace SimpleCalculator
+    
 {
     class Program
     {

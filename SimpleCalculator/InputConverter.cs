@@ -6,9 +6,23 @@ namespace SimpleCalculator
     {
         public static double ConvertInputToNumeric(string argTextInput)
         {
-            
-            
-            return 0;
+            double input = 0;
+            int tester = 1;
+            do
+            {
+                try
+                {
+                    input = Convert.ToDouble(argTextInput);
+                    tester = 0;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Enter the number's numerical value!");
+                    tester = 1;
+                }
+                Console.WriteLine("Enter ");
+            }while (tester != 0);
+            return input;
         }
     }
 }

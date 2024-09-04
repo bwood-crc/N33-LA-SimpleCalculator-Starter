@@ -4,7 +4,7 @@ using System;
 using System.Xml.Linq;
 
 namespace CalcLibrary
-    
+
 {
     public class CalcUtilities
     {
@@ -13,58 +13,69 @@ namespace CalcLibrary
         {
             double result = 0;
 
-            switch (argOperation.ToLower())
             {
-                case "+":
-                case "add":
+
+                switch (argOperation.ToLower())
+                {
+                    case "+":
+                    case "add":
 
 
 
-                    result = argFirstNumber + argSecondNumber;
+                        result = argFirstNumber + argSecondNumber;
 
-                    return result; ;
+                        return result; ;
 
-                    break;
+                        break;
 
-                case "-":
-                case "substract":
+                    case "-":
+                    case "substract":
 
-                    result = argFirstNumber - argSecondNumber;
+                        result = argFirstNumber - argSecondNumber;
 
-                    return result;
+                        return result;
 
-                    break;
+                        break;
 
-                case "*":
-                case "multiply":
+                    case "*":
+                    case "multiply":
 
-                    result = argFirstNumber * argSecondNumber;
+                        result = argFirstNumber * argSecondNumber;
 
-                    return result;
+                        return result;
 
-                    break;
+                        break;
 
-                case "/":
-                case "division":
+                    case "/":
+                    case "division":
 
-                    result = argFirstNumber / argSecondNumber;
-                    return result;
+                        result = argFirstNumber / argSecondNumber;
+                        return result;
 
 
-                    break;
+                        break;
 
-                case "^":
-                case "power":
+                    case "^":
+                    case "power":
 
-                    result = Math.Pow(argFirstNumber, argSecondNumber);
-                    return result;
+                        result = Math.Pow(argFirstNumber, argSecondNumber);
+                        return result;
+
+                        break;
+
+                    default:
+
+                        throw new ArgumentException("Invalid Operation");
+
+
+
+
+                }
+
+                return result;
 
 
             }
-
-            return result;
-
-
         }
     }
 }

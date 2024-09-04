@@ -4,8 +4,6 @@ namespace SimpleCalculator
 {
     public class CalculatorEngine
     {
-       //testing
-       //testing2
         public double Calculate (string argOperation, double argFirstNumber, double argSecondNumber)
         {
             double result = 0;

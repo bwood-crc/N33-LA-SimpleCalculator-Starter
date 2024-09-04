@@ -50,10 +50,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CalculatorEngine\CalcEngineLibrary.csproj">
-      <Project>{0603fd6f-19f0-47e1-b20c-4ce42f8a7d99}</Project>
-      <Name>CalcEngineLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="..\InputConverter\InputConverter.csproj">
       <Project>{36ea3cb7-1291-401f-8840-920a5c07a2f8}</Project>
       <Name>InputConverter</Name>

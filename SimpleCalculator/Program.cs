@@ -1,24 +1,24 @@
 ﻿using System;
-using CalcLibrary;
 using InputConverter;
 namespace SimpleCalculator
 {
+
     class Program
     {
         static void Main(string[] args)
-        {   
-            
+        {
+
 
             try
             {
-              
-                
+
+
                 double firstNumber;
                 string firstInput;
                 Console.WriteLine("Enter the first number of the opperation: ");
                 firstInput = Console.ReadLine();
 
-                while(!Converter.ValidInput(firstInput)) 
+                while (!Converter.ValidInput(firstInput))
                 {
                     Console.WriteLine("Invalid Entry, enter a numerical: ");
                     firstInput = Console.ReadLine();
@@ -26,7 +26,7 @@ namespace SimpleCalculator
                 //test
                 //Console.WriteLine(firstInput);
                 //testworks
-                firstNumber=Converter.ConvertInputToNumeric(firstInput);
+                firstNumber = Converter.ConvertInputToNumeric(firstInput);
 
                 double secondNumber;
                 string secondInput;
@@ -44,16 +44,29 @@ namespace SimpleCalculator
                 secondNumber = Converter.ConvertInputToNumeric(secondInput);
 
                 //getting operator
-                Console.WriteLine("What operation would you like to make \n choose either \' + \' , \' / \' , \' - \' , \' * \' , \' % \':");
+                Console.WriteLine("What operation would you like to make ");
+                foreach (string i in Converter.operationOptions)
+                {
+                    Console.Write(i + " , ");
+                }
+                Console.WriteLine();
                 string operationSelection = Console.ReadLine();
-
+                while (!Converter.operationValidator(operationSelection))
+                {
+                    Console.WriteLine("Input is not valid");
+                    foreach (string i in Converter.operationOptions)
+                    {
+                        Console.Write(i + " , ");
+                    }
+                    Console.WriteLine();
+                    operationSelection = Console.ReadLine();
+                }
             }
             catch (Exception ex)
             {
                 // Normally, we'd log this error to a file.
                 Console.WriteLine(ex.Message);
             }
-
         }
     }
 }

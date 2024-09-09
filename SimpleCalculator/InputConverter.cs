@@ -21,7 +21,7 @@ namespace SimpleCalculator
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Enter a number's numerical value not something else!");
+                    Console.WriteLine("numerical values only!");
                     tester = 1;
                 }
                 Console.WriteLine("Enter the number's numerical value: ");
@@ -57,8 +57,8 @@ namespace SimpleCalculator
 
                     default:
 
-                        Console.WriteLine("Enter standard operator in numeric format or in letter format such as + / add, - / substract, x / multiply, " +
-                    "(/) / division, ^ / power ");
+                        Console.WriteLine("Enter standard operator in numeric format or in letter format such as + or add, - or substract, x or multiply, " +
+                    "/ or division, ^ or power ");
                         operation = Console.ReadLine();
                         break;
 

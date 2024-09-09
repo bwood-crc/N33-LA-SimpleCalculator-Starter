@@ -24,14 +24,15 @@ namespace SimpleCalculator
                 Console.WriteLine("enter the operation you wish to perform: (ex: + or plus, - or substract , x or multiply, / or divide, ^ or power) : ");
                 string operation = InputConverter.OperationConverter(Console.ReadLine());
 
+
                 double result =CalcUtilities.Calculate(operation, firstNumber, secondNumber);
                 
-                Console.WriteLine("The value {0} {1} the value {2} is equal to {3:.00}",firstNumber,operation ,secondNumber,result.ToString());
+                Console.WriteLine("The value {0} {1} the value {2} is equal to {3:.00}",firstNumber,operation ,secondNumber,result);
                 Console.ReadLine();
             } catch (Exception ex)
             {
                 // Normally, we'd log this error to a file.
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("an error occured in the program");
             }
 
         }

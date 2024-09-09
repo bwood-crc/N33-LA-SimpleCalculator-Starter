@@ -9,15 +9,15 @@ namespace SimpleCalculator
     {
         static void Main(string[] args)
         {
-            
-          
-                double ConvertedResult1,ConvertedResult2;
+
+
+            double ConvertedResult1, ConvertedResult2;
             while (true)
             {
                 Console.WriteLine("enter the first number in its numerical form:");
                 string firstNumber = Console.ReadLine();
                 bool res1 = InputConverter.ConvertInputToNumeric(firstNumber, out double convertedRes);
-                if(res1 == true)
+                if (res1 == true)
                 {
                     ConvertedResult1 = convertedRes;
                     break;
@@ -44,23 +44,49 @@ namespace SimpleCalculator
                 }
             }
 
-                Console.WriteLine("enter the operation you wish to perform: (ex: + or add, - or substract , x or multiply, / or division, ^ or power) : ");
-                string operation = InputConverter.OperationConverter(Console.ReadLine());
 
             
-                double result = CalcUtilities.Calculate(operation, ConvertedResult1, ConvertedResult2);
+            bool isvalid = false;
 
-                if (ConvertedResult1 == 0 && operation == "division" || ConvertedResult1 == 0 && operation == "/" || ConvertedResult2 == 0 && operation == "division" || ConvertedResult2 == 0 && operation == "/")
+            while (!isvalid) {
+
+                Console.WriteLine("enter the operation you wish to perform" +
+                    ": (ex: + or add, - or substract , x or multiply, / or division, ^ or power) : ");
+
+                   string operation = Console.ReadLine();
+
+                if (!CalcUtilities.IsValidOperator(operation)) {
+
+                    Console.WriteLine("The operation is not good please try again  + or add, - or substract , x or multiply," +
+                        " / or division, ^ or power ");
+                }
+                else
                 {
-                    result = 0;
+                    isvalid = true;
+                    double result = CalcUtilities.Calculate(operation, ConvertedResult1, ConvertedResult2);
+                    Console.WriteLine("The value {0} {1} the value {2} is equal to {3:0.00}", ConvertedResult1, operation, ConvertedResult2, result);
+                    Console.ReadLine();
                 }
 
-                
-                Console.WriteLine("The value {0} {1} the value {2} is equal to {3:0.00}",ConvertedResult1,operation , ConvertedResult2, result);
-                Console.ReadLine();
-            
-            } 
+
+            }
+
+
+           
+
+
+           
+
+         
+
+           
 
         }
+
     }
+
+   
+        }
+    
+
 

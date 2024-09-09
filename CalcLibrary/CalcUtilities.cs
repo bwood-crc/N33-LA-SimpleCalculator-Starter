@@ -13,71 +13,117 @@ namespace CalcLibrary
         {
             double result = 0;
 
+
+
+
+            switch (argOperation.ToLower())
             {
-
-                switch (argOperation.ToLower())
-                {
-                    case "+":
-                    case "add":
+                case "+":
+                case "add":
 
 
 
-                        result = argFirstNumber + argSecondNumber;
+                    result = argFirstNumber + argSecondNumber;
 
-                        return result; ;
+                    return result; ;
 
-                        break;
+                    break;
 
-                    case "-":
-                    case "substract":
+                case "-":
+                case "substract":
 
-                        result = argFirstNumber - argSecondNumber;
 
-                        return result;
 
-                        break;
+                    result = argFirstNumber - argSecondNumber;
 
-                    case "*":
-                    case "multiply":
+                    return result;
 
-                        result = argFirstNumber * argSecondNumber;
+                    break;
 
-                        return result;
+                case "*":
+                case "multiply":
 
-                        break;
+                    result = argFirstNumber * argSecondNumber;
 
-                    case "/":
-                    case "division":
+                    return result;
 
+                    break;
+
+                case "/":
+                case "division":
+
+                    if (argSecondNumber == 0)
+                    {
+
+                        result = 0.00;
+
+                    }
+                    else
+                    {
                         result = argFirstNumber / argSecondNumber;
-                        return result;
 
-
-                        break;
-
-                    case "^":
-                    case "power":
-
-                        result = Math.Pow(argFirstNumber, argSecondNumber);
-                        return result;
-
-                        break;
-
-                    default:
-
-                        throw new ArgumentException();
+                    }
 
 
 
+                    return result;
 
-                }
 
-                return result;
+                    break;
+
+                case "^":
+                case "power":
+
+                    result = Math.Pow(argFirstNumber, argSecondNumber);
+                    return result;
+
+                    break;
+
+                default:
+
+
+                    return 0;
+                    break;
+
+
 
 
             }
 
+            return result;
+
+
+
+
+
+
         }
-        
+        public static bool IsValidOperator(string argoperation)
+        {
+
+            switch (argoperation.ToLower())
+            {
+                case "+":
+                case "add":
+                case "-":
+                case "substract":
+                case "*":
+                case "multiply":
+                case "/":
+                case "division":
+                case "^":
+                case "power":
+
+                    return true;
+
+                default:
+
+                    return false;
+
+
+
+            }
+        }
     }
+
 }

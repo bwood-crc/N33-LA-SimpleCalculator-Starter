@@ -23,43 +23,11 @@ namespace SimpleCalculator
             return isTrue;
 
         }
-        public static string OperationConverter(string operation)
-        {
-            Boolean isvalid = false;
-
-
-            while (!isvalid)
-            {
-
-                switch (operation.ToLower())
-                {
-                    case "+":
-                    case "add":
-                    case "-":
-                    case "substract":
-                    case "*":
-                    case "multiply":
-                    case "/":
-                    case "division":
-                    case "^":
-                    case "power":
-
-                        isvalid = true;
-
-                        break;
-
-                    default:
-
-                        Console.WriteLine("Enter standard operator in numeric format or in letter format such as + or add, - or substract, x or multiply, " +
-                    "/ or division, ^ or power: ");
-                        operation = Console.ReadLine();
-                        break;
-
-                }
+        /*
 
             }
             return operation.ToLower();
-        } 
+        } */
         }
     }
 

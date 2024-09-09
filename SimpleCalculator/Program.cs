@@ -50,7 +50,7 @@ namespace SimpleCalculator
 
             while (!isvalid) {
 
-                Console.WriteLine("enter the operation you wish to perform" +
+                Console.WriteLine("\nEnter the operation you wish to perform" +
                     ": (ex: + or add, - or substract , x or multiply, / or division, ^ or power) : ");
 
                    string operation = Console.ReadLine();

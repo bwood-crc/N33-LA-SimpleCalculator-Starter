@@ -12,87 +12,98 @@ namespace CalcLibrary
 
         {
             double result = 0;
-
-
-
-
-            switch (argOperation.ToLower())
+            try
             {
-                case "+":
-                case "add":
+
+                switch (argOperation.ToLower())
+                {
+                    case "+":
+                    case "add":
 
 
 
-                    result = argFirstNumber + argSecondNumber;
+                        result = argFirstNumber + argSecondNumber;
 
-                    return result; ;
+                        return result; ;
 
-                    break;
+                        break;
 
-                case "-":
-                case "substract":
-
-
-
-                    result = argFirstNumber - argSecondNumber;
-
-                    return result;
-
-                    break;
-
-                case "*":
-                case "multiply":
-
-                    result = argFirstNumber * argSecondNumber;
-
-                    return result;
-
-                    break;
-
-                case "/":
-                case "division":
-
-                    if (argSecondNumber == 0)
-                    {
-
-                        result = 0.00;
-
-                    }
-                    else
-                    {
-                        result = argFirstNumber / argSecondNumber;
-
-                    }
+                    case "-":
+                    case "substract":
 
 
 
-                    return result;
+                        result = argFirstNumber - argSecondNumber;
+
+                        return result;
+
+                        break;
+
+                    case "*":
+                    case "multiply":
+
+                        result = argFirstNumber * argSecondNumber;
+
+                        return result;
+
+                        break;
+
+                    case "/":
+                    case "division":
+
+                        if (argSecondNumber == 0)
+                        {
+
+                            result = 0;
+                            break;
+
+                        }
+                        else
+                        {
+                            result = argFirstNumber / argSecondNumber;
+
+                        }
 
 
-                    break;
 
-                case "^":
-                case "power":
-
-                    result = Math.Pow(argFirstNumber, argSecondNumber);
-                    return result;
-
-                    break;
-
-                default:
+                        return result;
 
 
-                    return 0;
-                    break;
+                        break;
+
+                    case "^":
+                    case "power":
+
+                        result = Math.Pow(argFirstNumber, argSecondNumber);
+                        return result;
+
+                        break;
+
+                    default:
+
+
+                        throw new ArgumentException();
+                        break;
 
 
 
+
+                }
+
+                return result;
 
             }
-
-            return result;
-
-
+            
+            catch (ArgumentException ex)
+            {
+             
+                return 0;
+            }
+            catch (Exception ex)
+            {
+               
+                return 0;
+            }
 
 
 

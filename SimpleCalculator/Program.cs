@@ -65,7 +65,7 @@ namespace SimpleCalculator
                 }
                 double result = 0;
                 result=CalcUti.Calculate(operationSelection, firstNumber, secondNumber);
-                Console.WriteLine(result);
+                Console.WriteLine(CalcUti.Verbalise(operationSelection, firstNumber, secondNumber, result));
                 Console.ReadLine();
             }
             catch (Exception ex)

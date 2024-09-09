@@ -73,6 +73,16 @@ namespace SimpleCalculator.Test.Unit
 
         }
         [TestMethod]
+        public void DividesByZeroAndExcpectInfiniteAsResult()
+        {
+
+            int number1 = 4;
+            int number2 = 0;
+            double result = CalcUti.Calculate("divide", number1, number2);
+            Assert.AreEqual(double.PositiveInfinity, result);
+
+        }
+        [TestMethod]
         public void DividesTwoNumbersAndReturnsValidResultForNonSymbolOpertion()
         {
 

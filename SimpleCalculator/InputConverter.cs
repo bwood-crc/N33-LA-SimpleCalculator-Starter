@@ -4,31 +4,24 @@ namespace SimpleCalculator
 {
     public class InputConverter
     {
-        public static double ConvertInputToNumeric(string argTextInput)
+        public static bool ConvertInputToNumeric(string argTextInput, out double ConvertedResult)
         {
+            bool isTrue = false;
             double input = 0;
-            int tester = 1;
-            do
-            {
-                try
-                {
-                    input = Convert.ToDouble(argTextInput);
-                    tester = 0;
-                    if (tester == 0)
-                    {
-                        break;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("numerical values only!");
-                    tester = 1;
-                }
-                Console.WriteLine("Enter the number's numerical value: ");
-                argTextInput = Console.ReadLine();
 
-            } while (tester != 0);
-            return input;
+            try
+            {
+                input = Convert.ToDouble(argTextInput);
+                ConvertedResult = input;
+                isTrue = true;
+            }
+            catch (Exception ex)
+            {
+                ConvertedResult = 0;
+                isTrue = false;
+            }
+            return isTrue;
+
         }
         public static string OperationConverter(string operation)
         {

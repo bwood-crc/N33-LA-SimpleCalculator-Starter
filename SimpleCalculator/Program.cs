@@ -9,35 +9,58 @@ namespace SimpleCalculator
     {
         static void Main(string[] args)
         {
-            try
+            
+          
+                double ConvertedResult1,ConvertedResult2;
+            while (true)
             {
-
-
-                // Class to perform actual calculations
-
                 Console.WriteLine("enter the first number in its numerical form:");
-                double firstNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine());
+                string firstNumber = Console.ReadLine();
+                bool res1 = InputConverter.ConvertInputToNumeric(firstNumber, out double convertedRes);
+                if(res1 == true)
+                {
+                    ConvertedResult1 = convertedRes;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("numeric values only!");
+                }
+            }
+
+            while (true)
+            {
                 Console.WriteLine("enter the second number in its numerical form:");
-                double secondNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine());
-                Console.WriteLine("enter the operation you wish to perform: (ex: + or plus, - or substract , x or multiply, / or divide, ^ or power) : ");
+                string secondNumber = Console.ReadLine();
+                bool res2 = InputConverter.ConvertInputToNumeric(secondNumber, out double convertedRes);
+                if (res2 == true)
+                {
+                    ConvertedResult2 = convertedRes;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("numeric values only!");
+                }
+            }
+
+                Console.WriteLine("enter the operation you wish to perform: (ex: + or add, - or substract , x or multiply, / or division, ^ or power) : ");
                 string operation = InputConverter.OperationConverter(Console.ReadLine());
 
-                double result = CalcUtilities.Calculate(operation, firstNumber, secondNumber);
+            
+                double result = CalcUtilities.Calculate(operation, ConvertedResult1, ConvertedResult2);
 
-                if (firstNumber == 0 && operation == "division" || firstNumber == 0 && operation == "/" || secondNumber == 0 && operation == "division" || secondNumber == 0 && operation == "/")
+                if (ConvertedResult1 == 0 && operation == "division" || ConvertedResult1 == 0 && operation == "/" || ConvertedResult2 == 0 && operation == "division" || ConvertedResult2 == 0 && operation == "/")
                 {
                     result = 0;
                 }
 
                 
-                Console.WriteLine("The value {0} {1} the value {2} is equal to {3:0.00}",firstNumber,operation ,secondNumber,result);
+                Console.WriteLine("The value {0} {1} the value {2} is equal to {3:0.00}",ConvertedResult1,operation , ConvertedResult2, result);
                 Console.ReadLine();
-            } catch (Exception ex)
-            {
-                // Normally, we'd log this error to a file.
-                Console.WriteLine("an error occured in the program");
-            }
+            
+            } 
 
         }
     }
-}
+

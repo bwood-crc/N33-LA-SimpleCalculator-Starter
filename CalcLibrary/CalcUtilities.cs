@@ -65,7 +65,7 @@ namespace CalcLibrary
 
                     default:
 
-                        throw new ArgumentException("Invalid Operation");
+                        throw new ArgumentException();
 
 
 

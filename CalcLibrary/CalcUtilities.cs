@@ -12,9 +12,7 @@ namespace CalcLibrary
 
         {
             double result = 0;
-            try
-            {
-
+           
                 switch (argOperation.ToLower())
                 {
                     case "+":
@@ -54,7 +52,9 @@ namespace CalcLibrary
                         if (argSecondNumber == 0)
                         {
 
+                           
                             result = 0;
+                          
                             break;
 
                         }
@@ -63,7 +63,6 @@ namespace CalcLibrary
                             result = argFirstNumber / argSecondNumber;
 
                         }
-
 
 
                         return result;
@@ -82,7 +81,8 @@ namespace CalcLibrary
                     default:
 
 
-                        throw new ArgumentException();
+                        Console.WriteLine("Not a valid operator sign or word");
+                        return result;
                         break;
 
 
@@ -92,23 +92,15 @@ namespace CalcLibrary
 
                 return result;
 
+
+
+
+
             }
-            
-            catch (ArgumentException ex)
-            {
-             
-                return 0;
-            }
-            catch (Exception ex)
-            {
-               
-                return 0;
-            }
+           
 
+        
 
-
-
-        }
         public static bool IsValidOperator(string argoperation)
         {
 

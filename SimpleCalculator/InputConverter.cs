@@ -23,11 +23,7 @@ namespace SimpleCalculator
             return isTrue;
 
         }
-        /*
-
-            }
-            return operation.ToLower();
-        } */
+      
         }
     }
 

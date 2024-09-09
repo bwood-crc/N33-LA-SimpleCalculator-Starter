@@ -58,7 +58,7 @@ namespace SimpleCalculator
                     default:
 
                         Console.WriteLine("Enter standard operator in numeric format or in letter format such as + or add, - or substract, x or multiply, " +
-                    "/ or division, ^ or power ");
+                    "/ or division, ^ or power: ");
                         operation = Console.ReadLine();
                         break;
 

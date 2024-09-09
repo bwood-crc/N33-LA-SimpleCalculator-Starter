@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
@@ -13,8 +14,9 @@ namespace SimpleCalculator.Test.Unit
         public void ConvertsValidStringInputIntoDouble()
         {
             string inputNumber = "5";
-            //double convertedNumber = InputConverter.ConvertInputToNumeric(inputNumber);
-           // Assert.AreEqual(5, convertedNumber);
+            bool convertedNumber = InputConverter.ConvertInputToNumeric(inputNumber,out double ConvertResult);
+            Assert.IsTrue(convertedNumber);
+            Assert.AreEqual(5, ConvertResult);
         }
 
         [TestMethod]
@@ -22,8 +24,10 @@ namespace SimpleCalculator.Test.Unit
         public void FailsToConvertsInvalidStringInputIntoDouble()
         {
             string inputNumber = "*";
-           // double convertedNumber = InputConverter.ConvertInputToNumeric(inputNumber);
-           // Assert.AreEqual(2, convertedNumber);
+           bool convertedNumber = InputConverter.ConvertInputToNumeric(inputNumber,out double ConvertResult);
+           Assert.IsFalse(convertedNumber);
+          // Assert.AreEqual("?");
+          
         }
     }
 }

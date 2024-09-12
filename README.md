@@ -23,5 +23,5 @@
 21- we created the IsValidOperator Boolean method and implemented it to the main program.
 22- we fixed and added tests to the CalculatorEngineTest class.
 23- we added a try block in the Calculate method in CalcUtilities and moved another try block elsewhere to make everything work.
-24- then we added and fixed multiple test methods in the test class to be able to test the methods used in the entire program.
-
+24- we added and fixed multiple test methods in the test class to be able to test the methods used in the entire program.
+25- we added the readme to our github project. 

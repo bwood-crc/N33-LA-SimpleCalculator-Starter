@@ -19,12 +19,12 @@ namespace SimpleCalculator
 
             if (argOperation == "*" || argOperation.ToLower() == "multiply")
             {
-                result = argFirstNumber*argSecondNumber;
+                result = argFirstNumber * argSecondNumber;
             }
 
             if (argOperation == "/" || argOperation.ToLower() == "divide")
             {
-                result = argFirstNumber/argSecondNumber;
+                result = argFirstNumber / argSecondNumber;
             }
 
             return result;

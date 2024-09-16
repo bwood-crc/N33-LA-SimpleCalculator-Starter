@@ -27,7 +27,7 @@ namespace SimpleCalculator
 
                 var calculatorEngine = new CalculatorEngine();
 
-                double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
+                 double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
 
 
                 // Console.WriteLine(result);

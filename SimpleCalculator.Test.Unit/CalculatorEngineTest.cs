@@ -8,6 +8,7 @@ namespace SimpleCalculator.Test.Unit
     {
         private readonly CalculatorEngine _calculatorEngine = new CalculatorEngine();
 
+
         [TestMethod]
         public void AddsTwoNumbersAndReturnsValidResultForNonSymbolOpertion()
         {

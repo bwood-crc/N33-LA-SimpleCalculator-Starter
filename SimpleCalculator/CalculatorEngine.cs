@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace SimpleCalculator
 {
@@ -8,25 +8,27 @@ namespace SimpleCalculator
         {
             double result = 0;
 
-            if (argOperation == "+" || argOperation.ToLower() == "add") {
+            if (argOperation.Equals("+") || argOperation.ToLower().Equals("add")) {
                 result = argFirstNumber + argSecondNumber;
             }
-
-            if (argOperation == "-" || argOperation.ToLower() == "subtract")
+            if (argOperation.Equals("-") || argOperation.ToLower().Equals("subtract"))
             {
                 result = argFirstNumber - argSecondNumber;
             }
-
-            if (argOperation == "*" || argOperation.ToLower() == "multiply")
+            if (argOperation.Equals("*") || argOperation.ToLower().Equals("multiply"))
             {
                 result = argFirstNumber * argSecondNumber;
             }
 
-            if (argOperation == "/" || argOperation.ToLower() == "divide")
+            if (argOperation.Equals("/") || argOperation.ToLower().Equals("divide"))
             {
                 result = argFirstNumber / argSecondNumber;
             }
-
+            //this method will calculate the exponent
+            if (argOperation.Equals("exp"))
+            {
+                result = Math.Pow(argFirstNumber, argSecondNumber);
+            }
             return result;
         }
     }

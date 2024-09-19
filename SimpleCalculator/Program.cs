@@ -11,29 +11,34 @@ namespace SimpleCalculator
             try
             {
 
-                //String operator1 = "+";
+               // Class to convert user input
+                InputConverter inputConverter = new InputConverter();
 
-                //Console.WriteLine(firstNumber + operator1);
+                // Class to perform actual calculations
+                CalculatorEngine calculatorEngine = new CalculatorEngine();
 
+                double firstNumber, secondNumber;
+                
+                Console.Write("Enter the first number: ");
+                String temp = Console.ReadLine();
+                while (!double.TryParse(temp, out firstNumber))
+                {
+                    Console.Write("Invalid input!!! Enter the first number: ");
+                    temp = Console.ReadLine();
+                }
+                firstNumber = InputConverter.ConvertInputToNumeric(temp);
+                Console.Write("Enter the second number: ");
+                String temp2 = Console.ReadLine();
 
+                while (!double.TryParse(temp2, out secondNumber))
+                {
+                    Console.Write("Invalid input!!! Enter the second number: ");
+                    temp2 = Console.ReadLine();
+                }
+                secondNumber = InputConverter.ConvertInputToNumeric(temp2);
 
-                //// Class to convert user input
-                //InputConverter inputConverter = new InputConverter();
-
-                //// Class to perform actual calculations
-                //CalculatorEngine calculatorEngine = new CalculatorEngine();
-
-
-
-                //    double firstNumber = inputConverter.ConvertInputToNumeric(Console.ReadLine());
-                //while (!(firstNumber.Equals(double)))
-                //{
-                //    firstNumber = inputConverter.ConvertInputToNumeric(Console.ReadLine());
-                //}
-                //double secondNumber = inputConverter.ConvertInputToNumeric(Console.ReadLine());
-                //string operation = Console.ReadLine();
-
-                //double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
+                Console.Write("Enter the operator (+, -, *, /): ");
+                string operation = Console.ReadLine();
 
 
                 double firstNumber = 10;

@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Text;
 
+
 namespace SimpleCalculator
 {
     class Program
@@ -42,7 +43,7 @@ namespace SimpleCalculator
 
 
                 
-                double result = firstNumber + secondNumber;
+                double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
 
                 StringBuilder stringBuilder = new StringBuilder($"{firstNumber} {operation} {secondNumber} is equal to: {result}");
 

@@ -41,14 +41,14 @@ namespace SimpleCalculator
                 string operation = Console.ReadLine();
 
 
-                double firstNumber = 10;
-                double secondNumber = 20;
-                string operator1 = "+";
+                
                 double result = firstNumber + secondNumber;
 
-                StringBuilder stringBuilder = new StringBuilder($"{firstNumber} {operator1} {secondNumber} is equal to: {result}");
+                StringBuilder stringBuilder = new StringBuilder($"{firstNumber} {operation} {secondNumber} is equal to: {result}");
 
                 Console.WriteLine(stringBuilder.ToString());
+
+                Console.ReadLine();
 
                
             } catch (Exception ex)
